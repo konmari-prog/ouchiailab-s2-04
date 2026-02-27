@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>第4回 今日から売り手になる！出品＆X発信スタートガイド | おうちAIラボ Season2</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        primary: "#F490A1",
+        "primary-dark": "#E87A8E",
+        mint: "#AADDDD",
+        "mint-dark": "#2E9090",
+        "mint-light": "#D4EEEE",
+        "mint-bg": "#F9FDFD",
+        "page-bg": "#F5F9F9",
+        "icon-bg": "#FFF0F2",
+        "text-main": "#2D3436",
+        "text-sub": "#6B7B7B",
+        "text-answer": "#3D4A4A",
+      },
+      fontFamily: {
+        display: ["Noto Sans JP", "sans-serif"],
+        sans: ["Noto Sans JP", "sans-serif"],
+      },
+    },
+  },
+};
+</script>
+<style>
+body { font-family: 'Noto Sans JP', sans-serif; }
+.hero-gradient {
+  background: linear-gradient(135deg, #F490A1 0%, #E87A8E 100%);
+  position: relative;
+  overflow: hidden;
+}
+.hero-gradient::before {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 50%;
+  top: -80px;
+  right: -60px;
+}
+.hero-gradient::after {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 50%;
+  bottom: -60px;
+  left: -40px;
+}
+.step-number {
+  width: 2.5rem; height: 2.5rem;
+  background: linear-gradient(135deg, #F490A1, #E87A8E);
+  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  color: white; font-weight: bold; flex-shrink: 0;
+}
+.prompt-box {
+  background: #1e1e1e; border-radius: 0.75rem; position: relative;
+}
+.prompt-box pre {
+  color: #e2e8f0; font-family: 'Noto Sans JP', monospace;
+  font-size: 13px; line-height: 1.8; padding: 1.25rem; padding-right: 4rem;
+  margin: 0; white-space: pre-wrap; overflow-wrap: break-word;
+}
+.copy-btn { transition: all 0.2s; }
+.copy-btn:hover { transform: scale(1.05); }
+.copy-btn.copied { background: #AADDDD !important; color: #2D3436 !important; }
+.check-card {
+  background: #F9FDFD;
+  border: 1px solid rgba(170,221,221,0.3); border-radius: 0.75rem; padding: 1.25rem;
+}
+.warn-card {
+  background: #FFF0F2;
+  border: 1px solid rgba(244,144,161,0.2); border-radius: 0.75rem; padding: 1.25rem;
+}
+.section-divider {
+  border: none; height: 1px;
+  background: linear-gradient(90deg, transparent, #E87A8E40, transparent);
+  margin: 2.5rem 0;
+}
+.coconala-accent { border-left: 4px solid #F490A1; }
+.x-accent { border-left: 4px solid #AADDDD; }
+@media print {
+  .no-print { display: none !important; }
+  .hero-gradient { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+</style>
+</head>
+<body class="bg-page-bg text-text-main">
+
+<!-- Header -->
+<header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200 shadow-sm no-print">
+<div class="max-w-3xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
+  <div class="flex items-center space-x-2">
+    <span class="material-icons text-primary text-xl">storefront</span>
+    <span class="font-bold text-sm tracking-tight">おうちAIラボ S2</span>
+  </div>
+  <nav class="flex items-center space-x-4 text-xs font-medium">
+    <a class="hover:text-primary transition-colors hidden sm:block" href="#listing">出品</a>
+    <a class="hover:text-primary transition-colors hidden sm:block" href="#x-strategy">X戦略</a>
+    <a class="hover:text-primary transition-colors hidden sm:block" href="#post-templates">投稿術</a>
+    <a class="hover:text-primary transition-colors hidden sm:block" href="#mindset">心構え</a>
+    <a class="hover:text-primary transition-colors" href="#checklist">チェック</a>
+  </nav>
+</div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero-gradient py-16 lg:py-20 text-white">
+<div class="max-w-3xl mx-auto px-4 sm:px-6 text-center relative z-10">
+  <p class="font-bold tracking-widest uppercase mb-3 text-xs text-white/80">おうちAIラボ Season2 ─ SNS × コンテンツ販売</p>
+  <h1 class="text-2xl md:text-4xl font-extrabold mb-4 leading-tight">
+    今日から売り手になる！<br/>
+    <span class="text-white/90">出品＆X発信スタートガイド</span>
+  </h1>
+  <p class="text-white/80 text-base mb-6">第4回｜2026.2.28（土）講師：コンマリ</p>
+  <div class="flex flex-wrap justify-center gap-3 text-xs">
+    <span class="bg-white/20 backdrop-blur-sm rounded-full px-4 py-1.5">配布資料 + 実践ガイド</span>
+    <span class="bg-white/20 backdrop-blur-sm rounded-full px-4 py-1.5">復習・おさらい対応</span>
+  </div>
+</div>
+</section>
+
+<!-- Today's Goal -->
+<section class="max-w-3xl mx-auto px-4 sm:px-6 py-12">
+<div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-8">
+  <div class="flex items-center gap-3 mb-6">
+    <span class="material-icons text-primary text-2xl">flag</span>
+    <h2 class="text-xl font-bold">今日のゴール</h2>
+  </div>
+  <p class="text-text-sub mb-6 text-sm">今日やること、2つだけ。</p>
+  <div class="grid sm:grid-cols-2 gap-4">
+    <div class="bg-icon-bg rounded-xl p-6 border border-primary/10 text-center">
+      <span class="material-icons text-primary text-3xl mb-3">store</span>
+      <p class="font-bold text-sm mb-1">お店を開く</p>
+      <p class="text-xs text-text-sub mt-1">コンテンツマーケットへ出品</p>
+    </div>
+    <div class="bg-mint-bg rounded-xl p-6 border border-mint/20 text-center">
+      <span class="material-icons text-mint text-3xl mb-3">campaign</span>
+      <p class="font-bold text-sm mb-1">看板を置く</p>
+      <p class="text-xs text-text-sub mt-1">X投稿戦略を知る</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<hr class="section-divider max-w-3xl mx-auto"/>
+
+<!-- Section 01: Listing -->
+<section id="listing" class="max-w-3xl mx-auto px-4 sm:px-6 pb-12">
+<div class="flex items-center gap-3 mb-8">
+  <div class="step-number text-base">1</div>
+  <h2 class="text-xl font-bold">お店を開く ─ コンテンツマーケット出品</h2>
+</div>
+
+<!-- Why coconala -->
+<div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100 mb-8 coconala-accent">
+  <h3 class="font-bold text-sm mb-4">初心者が「置くだけ」で始められる理由</h3>
+  <div class="grid sm:grid-cols-3 gap-4">
+    <div class="bg-icon-bg rounded-lg p-4 text-center">
+      <p class="font-bold text-xs mb-1">接客不要</p>
+      <p class="text-xs text-text-sub">やり取りなし。DLで完結。手間いらず。</p>
+    </div>
+    <div class="bg-icon-bg rounded-lg p-4 text-center">
+      <p class="font-bold text-xs mb-1">在庫不要</p>
+      <p class="text-xs text-text-sub">一度作れば何度も売れる。収益化しやすい。</p>
+    </div>
+    <div class="bg-icon-bg rounded-lg p-4 text-center">
+      <p class="font-bold text-xs mb-1">即スタート</p>
+      <p class="text-xs text-text-sub">審査なしですぐ公開可能。気軽に始められる。</p>
+    </div>
+  </div>
+</div>
+
+<!-- AI description -->
+<div class="mb-8">
+  <h3 class="font-bold text-sm mb-4 flex items-center gap-2">
+    <span class="material-icons text-primary">auto_awesome</span>
+    商品説明文はAIに任せよう
+  </h3>
+  <div class="space-y-4">
+    <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="w-8 h-8 rounded-full bg-icon-bg text-primary-dark text-sm font-bold flex items-center justify-center">1</span>
+        <h4 class="font-bold text-sm">商品の特徴をAIに伝える</h4>
+      </div>
+      <div class="prompt-box">
+        <pre>あなたはコンテンツマーケットの人気セラーです。
+以下の商品情報をもとに、買いたくなる商品説明文を作成してください。
+
+【商品名】[あなたの商品名]
+【ジャンル】[素材 / ノウハウ / テンプレート など]
+【こんな人向け】[ターゲット]
+【商品の特徴】
+・[特徴1]
+・[特徴2]
+・[特徴3]
+
+500文字以内で、以下の構成で書いてください。
+1. 冒頭のキャッチコピー（1行）
+2. こんなお悩みありませんか？（3つ）
+3. この商品で解決できること（3つ）
+4. 商品の内容（箇条書き）
+5. 購入後の未来（1行）</pre>
+        <button class="copy-btn absolute top-3 right-3 bg-primary text-white text-xs font-bold px-3 py-1.5 rounded-lg" onclick="copyPrompt(this)">コピー</button>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="w-8 h-8 rounded-full bg-icon-bg text-primary-dark text-sm font-bold flex items-center justify-center">2</span>
+        <h4 class="font-bold text-sm">出品の3ステップ</h4>
+      </div>
+      <div class="grid sm:grid-cols-3 gap-4">
+        <div class="bg-page-bg rounded-lg p-4">
+          <p class="font-bold text-primary text-xs mb-1">01 画像登録</p>
+          <p class="text-xs text-text-sub">前回作ったMiriCanvas画像をアップロード</p>
+          <p class="text-xs text-text-sub mt-1">1220 × 1240 px</p>
+        </div>
+        <div class="bg-page-bg rounded-lg p-4">
+          <p class="font-bold text-primary text-xs mb-1">02 カテゴリ選択</p>
+          <p class="text-xs text-text-sub">「素材」や「ノウハウ」など最適なカテゴリを選ぶ</p>
+        </div>
+        <div class="bg-page-bg rounded-lg p-4">
+          <p class="font-bold text-primary text-xs mb-1">03 価格設定</p>
+          <p class="text-xs text-text-sub">最低価格は500円〜。初めは手に取りやすい価格がおすすめ。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 参考リンク（コンテンツマーケット） -->
+<div class="mt-6 space-y-3">
+  <p class="text-xs font-bold text-text-sub flex items-center gap-1">
+    <span class="material-icons text-sm">link</span>参考リンク
+  </p>
+  <a href="AI%20Stock%20Collection.pdf" download class="flex items-center gap-4 bg-white rounded-xl p-4 shadow-sm border border-primary/20 hover:border-primary/50 hover:shadow-md transition-all group coconala-accent no-underline">
+    <div class="w-10 h-10 rounded-lg bg-icon-bg flex items-center justify-center flex-shrink-0 group-hover:bg-primary/10 transition-colors">
+      <span class="material-icons text-primary">picture_as_pdf</span>
+    </div>
+    <div class="flex-1 min-w-0">
+      <p class="font-bold text-sm text-text-main">出品サンプル（PDF）</p>
+      <p class="text-xs text-text-sub mt-0.5">AI Stock Collection ─ 正解ではなく「こんな感じ」の一例</p>
+    </div>
+    <span class="material-icons text-primary/40 group-hover:text-primary transition-colors flex-shrink-0">download</span>
+  </a>
+  <a href="https://coconala-support.zendesk.com/hc/ja/articles/45548375054105-%E3%82%B3%E3%83%B3%E3%83%86%E3%83%B3%E3%83%84%E3%81%AE%E5%87%BA%E5%93%81%E6%96%B9%E6%B3%95-%E3%82%B3%E3%83%B3%E3%83%86%E3%83%B3%E3%83%84%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%83%E3%83%88" target="_blank" rel="noopener" class="flex items-center gap-4 bg-white rounded-xl p-4 shadow-sm border border-primary/20 hover:border-primary/50 hover:shadow-md transition-all group coconala-accent no-underline">
+    <div class="w-10 h-10 rounded-lg bg-icon-bg flex items-center justify-center flex-shrink-0 group-hover:bg-primary/10 transition-colors">
+      <span class="material-icons text-primary">help_outline</span>
+    </div>
+    <div class="flex-1 min-w-0">
+      <p class="font-bold text-sm text-text-main">出品方法ガイド（公式）</p>
+      <p class="text-xs text-text-sub mt-0.5">coconala-support ─ コンテンツの出品方法を確認しよう</p>
+    </div>
+    <span class="material-icons text-primary/40 group-hover:text-primary transition-colors flex-shrink-0">open_in_new</span>
+  </a>
+  <a href="https://coconala.com/contents_market/pictures/cml0vgqw60ewoau0hbj3331yp" target="_blank" rel="noopener" class="flex items-center gap-4 bg-white rounded-xl p-4 shadow-sm border border-primary/20 hover:border-primary/50 hover:shadow-md transition-all group coconala-accent no-underline">
+    <div class="w-10 h-10 rounded-lg bg-icon-bg flex items-center justify-center flex-shrink-0 group-hover:bg-primary/10 transition-colors">
+      <span class="material-icons text-primary">storefront</span>
+    </div>
+    <div class="flex-1 min-w-0">
+      <p class="font-bold text-sm text-text-main">講師の参考商品ページ</p>
+      <p class="text-xs text-text-sub mt-0.5">coconala.com ─ 実際の出品ページを見てみよう</p>
+    </div>
+    <span class="material-icons text-primary/40 group-hover:text-primary transition-colors flex-shrink-0">open_in_new</span>
+  </a>
+</div>
+
+</section>
+
+<hr class="section-divider max-w-3xl mx-auto"/>
+
+<!-- Section 02: X Strategy -->
+<section id="x-strategy" class="max-w-3xl mx-auto px-4 sm:px-6 py-12">
+<div class="flex items-center gap-3 mb-8">
+  <div class="step-number text-base">2</div>
+  <h2 class="text-xl font-bold">看板を置く ─ X運用の3つの鉄則</h2>
+</div>
+
+<div class="grid md:grid-cols-3 gap-6 mb-8">
+  <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100 x-accent">
+    <div class="w-12 h-12 rounded-full bg-mint-bg flex items-center justify-center mb-4 mx-auto">
+      <span class="material-icons text-mint text-xl">handshake</span>
+    </div>
+    <h3 class="font-bold text-center text-sm mb-3">1. 価値提供</h3>
+    <ul class="space-y-2 text-xs text-text-sub">
+      <li>「売り込み」より「役立つ」</li>
+      <li>フォロワーの悩みを解決</li>
+      <li>無料でも価値ある情報を</li>
+      <li>専門知識をシェア</li>
+    </ul>
+  </div>
+  <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100 x-accent">
+    <div class="w-12 h-12 rounded-full bg-mint-bg flex items-center justify-center mb-4 mx-auto">
+      <span class="material-icons text-mint text-xl">favorite</span>
+    </div>
+    <h3 class="font-bold text-center text-sm mb-3">2. 共感</h3>
+    <ul class="space-y-2 text-xs text-text-sub">
+      <li>失敗談や過程を見せる</li>
+      <li>リアルな体験談</li>
+      <li>「私もそうだった」と親近感を生む投稿を</li>
+    </ul>
+  </div>
+  <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100 x-accent">
+    <div class="w-12 h-12 rounded-full bg-mint-bg flex items-center justify-center mb-4 mx-auto">
+      <span class="material-icons text-mint text-xl">push_pin</span>
+    </div>
+    <h3 class="font-bold text-center text-sm mb-3">3. 固定ポスト</h3>
+    <ul class="space-y-2 text-xs text-text-sub">
+      <li>プロフィールに商品を設置</li>
+      <li>重要な投稿を上部に</li>
+      <li>URLをわかりやすく</li>
+      <li>定期的に更新する</li>
+    </ul>
+  </div>
+</div>
+
+<!-- 固定ポスト テンプレ -->
+<div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100 mb-8">
+  <h3 class="font-bold text-sm mb-4 flex items-center gap-2">
+    <span class="material-icons text-mint">push_pin</span>
+    固定ポストの4要素
+  </h3>
+  <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
+    <div class="bg-mint-bg rounded-lg p-4 text-center">
+      <p class="font-bold text-mint-dark text-xs mb-1">宣言</p>
+      <p class="text-xs text-text-sub">何をしている人か一目でわかる</p>
+    </div>
+    <div class="bg-mint-bg rounded-lg p-4 text-center">
+      <p class="font-bold text-mint-dark text-xs mb-1">誘導</p>
+      <p class="text-xs text-text-sub">「こちらで販売中」の一文</p>
+    </div>
+    <div class="bg-mint-bg rounded-lg p-4 text-center">
+      <p class="font-bold text-mint-dark text-xs mb-1">リンク</p>
+      <p class="text-xs text-text-sub">コンテンツマーケット商品URLを設置</p>
+    </div>
+    <div class="bg-mint-bg rounded-lg p-4 text-center">
+      <p class="font-bold text-mint-dark text-xs mb-1">更新</p>
+      <p class="text-xs text-text-sub">実績や変化があれば書き換え</p>
+    </div>
+  </div>
+  <div class="prompt-box mt-4">
+    <pre>【固定ポスト テンプレート】
+
+[自分の肩書き・何をしている人か]です！
+
+[ターゲット]のために[商品の価値]を
+コンテンツマーケットで販売しています。
+
+→ [コンテンツマーケット商品URL]
+
+フォローしてくれた方には
+[無料特典 or 有益情報]を発信中！</pre>
+    <button class="copy-btn absolute top-3 right-3 bg-primary text-white text-xs font-bold px-3 py-1.5 rounded-lg" onclick="copyPrompt(this)">コピー</button>
+  </div>
+</div>
+
+<!-- 参考リンク（X） -->
+<div class="mt-6 space-y-3">
+  <p class="text-xs font-bold text-text-sub flex items-center gap-1">
+    <span class="material-icons text-sm">link</span>参考リンク
+  </p>
+  <a href="https://x.com/Studio_LaLa_AI" target="_blank" rel="noopener" class="flex items-center gap-4 bg-white rounded-xl p-4 shadow-sm border border-mint/30 hover:border-mint hover:shadow-md transition-all group x-accent no-underline">
+    <div class="w-10 h-10 rounded-lg bg-mint-bg flex items-center justify-center flex-shrink-0 group-hover:bg-mint/20 transition-colors">
+      <span class="material-icons text-mint">person</span>
+    </div>
+    <div class="flex-1 min-w-0">
+      <p class="font-bold text-sm text-text-main">講師の参考Xアカウント</p>
+      <p class="text-xs text-text-sub mt-0.5">@Studio_LaLa_AI ─ 実際の運用スタイルを参考にしてみよう</p>
+    </div>
+    <span class="material-icons text-mint/40 group-hover:text-mint transition-colors flex-shrink-0">open_in_new</span>
+  </a>
+</div>
+
+</section>
+
+<hr class="section-divider max-w-3xl mx-auto"/>
+
+<!-- Section 03: Post Templates -->
+<section id="post-templates" class="max-w-3xl mx-auto px-4 sm:px-6 py-12">
+<div class="flex items-center gap-3 mb-8">
+  <div class="step-number text-base">3</div>
+  <h2 class="text-xl font-bold">人を集める ─ 投稿ネタ無限生成術</h2>
+</div>
+
+<div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100 mb-8">
+  <h3 class="font-bold text-sm mb-4">AIで投稿ネタを量産する3ステップ</h3>
+  <div class="space-y-4">
+    <div class="flex items-start gap-4">
+      <span class="w-8 h-8 rounded-full bg-icon-bg text-primary-dark text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
+      <div>
+        <p class="font-bold text-xs">ターゲットの悩みを入力</p>
+        <p class="text-xs text-text-sub">「〇〇で困っている人の悩みを10個出して」</p>
+      </div>
+    </div>
+    <div class="flex items-start gap-4">
+      <span class="w-8 h-8 rounded-full bg-icon-bg text-primary-dark text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
+      <div>
+        <p class="font-bold text-xs">それぞれの解決策を3つずつ出す</p>
+        <p class="text-xs text-text-sub">「それぞれの悩みに対する解決策を3つずつ教えて」</p>
+      </div>
+    </div>
+    <div class="flex items-start gap-4">
+      <span class="w-8 h-8 rounded-full bg-icon-bg text-primary-dark text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
+      <div>
+        <p class="font-bold text-xs">投稿の型に当てはめる</p>
+        <p class="text-xs text-text-sub">テンプレートに流し込むだけで投稿完成</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="prompt-box mb-8">
+  <pre>あなたはSNS運用のプロです。
+以下のターゲットが抱える悩みを10個リストアップし、
+それぞれに対してX投稿用のツイート（140文字以内）を1つずつ作成してください。
+
+【ターゲット】
+[あなたのターゲットを入力]
+
+【投稿の型】
+1行目：共感を呼ぶ問いかけ
+2行目：解決策のヒント
+3行目：自分の商品への自然な誘導（押し売り感なし）
+
+トーンは親しみやすく、専門用語は使わないでください。</pre>
+  <button class="copy-btn absolute top-3 right-3 bg-primary text-white text-xs font-bold px-3 py-1.5 rounded-lg" onclick="copyPrompt(this)">コピー</button>
+</div>
+
+<!-- Profile Check -->
+<div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+  <h3 class="font-bold text-sm mb-4 flex items-center gap-2">
+    <span class="material-icons text-primary">verified</span>
+    プロフィール完成チェック
+  </h3>
+  <div class="grid sm:grid-cols-3 gap-4">
+    <div class="check-card text-center">
+      <span class="material-icons text-primary text-xl mb-2">account_circle</span>
+      <p class="font-bold text-xs">アイコン</p>
+      <p class="text-xs text-text-sub mt-1">第3回で作ったものを設定済み？</p>
+    </div>
+    <div class="check-card text-center">
+      <span class="material-icons text-primary text-xl mb-2">panorama</span>
+      <p class="font-bold text-xs">ヘッダー</p>
+      <p class="text-xs text-text-sub mt-1">第3回で作ったものを設定済み？</p>
+    </div>
+    <div class="check-card text-center">
+      <span class="material-icons text-primary text-xl mb-2">push_pin</span>
+      <p class="font-bold text-xs">固定ポスト</p>
+      <p class="text-xs text-text-sub mt-1">商品リンク付きの固定ポストを設定？</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<hr class="section-divider max-w-3xl mx-auto"/>
+
+<!-- Section 04: Mindset -->
+<section id="mindset" class="max-w-3xl mx-auto px-4 sm:px-6 py-12">
+<div class="flex items-center gap-3 mb-8">
+  <div class="step-number text-base">4</div>
+  <h2 class="text-xl font-bold">マインドセット ─ 誰も見てないから出す</h2>
+</div>
+
+<div class="grid md:grid-cols-3 gap-6">
+  <div class="bg-gradient-to-br from-primary/5 to-primary/10 rounded-xl p-6 border border-primary/10">
+    <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center mb-4">
+      <span class="font-bold text-primary-dark text-base">1</span>
+    </div>
+    <h3 class="font-bold text-sm mb-2">60点でまず公開</h3>
+    <p class="text-xs text-text-sub">完璧を目指さない。修正はいつでもできる。出さないまま時間だけが過ぎるのが一番もったいない。</p>
+  </div>
+  <div class="bg-gradient-to-br from-primary/5 to-primary/10 rounded-xl p-6 border border-primary/10">
+    <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center mb-4">
+      <span class="font-bold text-primary-dark text-base">2</span>
+    </div>
+    <h3 class="font-bold text-sm mb-2">反応ゼロは当たり前</h3>
+    <p class="text-xs text-text-sub">最初は誰も見ていない。傷つく必要はない。続けることで見てくれる人が増えてくる。</p>
+  </div>
+  <div class="bg-gradient-to-br from-primary/5 to-primary/10 rounded-xl p-6 border border-primary/10">
+    <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center mb-4">
+      <span class="font-bold text-primary-dark text-base">3</span>
+    </div>
+    <h3 class="font-bold text-sm mb-2">改善は出してから</h3>
+    <p class="text-xs text-text-sub">出して初めて答えが出る。反応を見て調整していこう。データがあれば迷わない。</p>
+  </div>
+</div>
+</section>
+
+<hr class="section-divider max-w-3xl mx-auto"/>
+
+<!-- Section 05: Checklist -->
+<section id="checklist" class="max-w-3xl mx-auto px-4 sm:px-6 py-12">
+<div class="flex items-center gap-3 mb-8">
+  <div class="step-number text-base">5</div>
+  <h2 class="text-xl font-bold">完了チェックリスト</h2>
+</div>
+
+<div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+  <p class="text-xs text-text-sub mb-6">今日やったことを確認。全部できなくても大丈夫。3/7の講座でフォローするよ！</p>
+  <div class="space-y-4">
+    <label class="flex items-center gap-4 p-4 rounded-lg border border-gray-200 hover:bg-icon-bg transition-colors cursor-pointer">
+      <input type="checkbox" class="w-5 h-5 rounded border-gray-300 text-primary focus:ring-primary">
+      <div>
+        <p class="font-bold text-xs">コンテンツマーケットに商品を出品した</p>
+        <p class="text-xs text-text-sub">画像・説明文・カテゴリ・価格を設定して公開</p>
+      </div>
+    </label>
+    <label class="flex items-center gap-4 p-4 rounded-lg border border-gray-200 hover:bg-icon-bg transition-colors cursor-pointer">
+      <input type="checkbox" class="w-5 h-5 rounded border-gray-300 text-primary focus:ring-primary">
+      <div>
+        <p class="font-bold text-xs">商品説明文をAIで作成した</p>
+        <p class="text-xs text-text-sub">プロンプトで生成→自分の言葉で微調整</p>
+      </div>
+    </label>
+    <label class="flex items-center gap-4 p-4 rounded-lg border border-gray-200 hover:bg-icon-bg transition-colors cursor-pointer">
+      <input type="checkbox" class="w-5 h-5 rounded border-gray-300 text-primary focus:ring-primary">
+      <div>
+        <p class="font-bold text-xs">Xの固定ポストを設定した</p>
+        <p class="text-xs text-text-sub">宣言・誘導・リンク・更新の4要素を含む</p>
+      </div>
+    </label>
+    <label class="flex items-center gap-4 p-4 rounded-lg border border-gray-200 hover:bg-icon-bg transition-colors cursor-pointer">
+      <input type="checkbox" class="w-5 h-5 rounded border-gray-300 text-primary focus:ring-primary">
+      <div>
+        <p class="font-bold text-xs">投稿ネタを10個以上ストックした</p>
+        <p class="text-xs text-text-sub">AIで生成した投稿ネタをメモに保存</p>
+      </div>
+    </label>
+    <label class="flex items-center gap-4 p-4 rounded-lg border border-gray-200 hover:bg-icon-bg transition-colors cursor-pointer">
+      <input type="checkbox" class="w-5 h-5 rounded border-gray-300 text-primary focus:ring-primary">
+      <div>
+        <p class="font-bold text-xs">Xプロフィールにアイコン・ヘッダー・自己紹介を設定した</p>
+        <p class="text-xs text-text-sub">第3回で作成したビジュアルを反映</p>
+      </div>
+    </label>
+  </div>
+</div>
+
+<!-- MiriCanvas ツールリンク -->
+<div class="bg-white rounded-xl p-5 shadow-sm border border-gray-100 mt-6">
+  <div class="flex items-center gap-2 mb-3">
+    <span class="material-icons text-mint text-lg">card_giftcard</span>
+    <h3 class="font-bold text-sm">MiriCanvas ツールリンク</h3>
+  </div>
+  <ul class="space-y-2 text-xs text-text-sub">
+    <li class="flex items-start gap-2">
+      <span class="material-icons text-primary text-sm mt-0.5">open_in_new</span>
+      <a href="https://learning.shift-ai.co.jp/members/mjTPK2PDxwQZ/course/Fy6BFXRMS6W6/lesson/uo2t3FeuJQJg" target="_blank" class="text-primary underline font-medium">SHIFT AI会員ページ（MiriCanvas）</a>
+    </li>
+    <li class="flex items-start gap-2">
+      <span class="material-icons text-mint text-sm mt-0.5">vpn_key</span>
+      <span>クーポンコード: <code class="bg-gray-100 px-2 py-0.5 rounded font-mono font-bold text-text-main">SHIFTAIBENEFIT</code></span>
+    </li>
+    <li class="flex items-start gap-2">
+      <span class="material-icons text-mint text-sm mt-0.5">help_outline</span>
+      <a href="https://help.miricanvas.com/hc/ja/articles/25867251714841" target="_blank" class="text-mint-dark underline">ログイン方法ヘルプ</a>
+    </li>
+    <li class="flex items-start gap-2">
+      <span class="material-icons text-mint text-sm mt-0.5">help_outline</span>
+      <a href="https://help.miricanvas.com/hc/ja/articles/49577933254041" target="_blank" class="text-mint-dark underline">クーポン登録方法</a>
+    </li>
+  </ul>
+</div>
+
+<!-- 事前準備アラート -->
+<div class="warn-card mt-8">
+  <p class="font-bold text-primary-dark flex items-center gap-2 mb-2 text-sm">
+    <span class="material-icons">warning</span>
+    次回（第5回 3/7）までにやっておくこと
+  </p>
+  <ul class="space-y-1 text-xs text-text-answer">
+    <li class="flex items-start gap-2"><span class="material-icons text-base mt-0.5">check</span>Xの本人確認を完了させる</li>
+    <li class="flex items-start gap-2"><span class="material-icons text-base mt-0.5">check</span>運用したいアカウントを決定し、そのアカウントでログインしておく</li>
+    <li class="flex items-start gap-2"><span class="material-icons text-base mt-0.5">check</span><a href="https://developer.x.com/ja" target="_blank" class="underline font-medium">developer.x.com</a> にアクセスできることを確認</li>
+  </ul>
+</div>
+</section>
+
+<!-- Next Step -->
+<section class="max-w-3xl mx-auto px-4 sm:px-6 pb-16">
+<div class="hero-gradient rounded-2xl p-8 text-white text-center">
+  <span class="material-icons text-3xl mb-3 relative z-10">event</span>
+  <h2 class="text-xl font-bold mb-2 relative z-10">次回予告</h2>
+  <p class="text-white/90 mb-4 text-sm relative z-10">GASで毎日の投稿を仕組みに変えよう！</p>
+  <div class="bg-white/20 backdrop-blur-sm rounded-xl p-4 inline-block relative z-10">
+    <p class="font-bold text-sm">第5回 毎日投稿を「仕組み化」するGAS自動投稿術</p>
+    <p class="text-white/80 text-xs mt-1">3/7（土）8:00〜9:00｜講師：コンマリ</p>
+  </div>
+</div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-white border-t border-gray-200 py-8">
+<div class="max-w-3xl mx-auto px-4 sm:px-6 text-center text-xs text-text-sub">
+  <p class="font-bold text-text-main mb-1">おうちAIラボ Season2 ─ SNS × コンテンツ販売シリーズ</p>
+  <p>第4回 配布資料 + 実践ガイド｜講師：コンマリ（@konmari_tweet）</p>
+</div>
+</footer>
+
+<script>
+function copyPrompt(btn) {
+  const pre = btn.closest('.prompt-box').querySelector('pre');
+  navigator.clipboard.writeText(pre.textContent).then(() => {
+    btn.textContent = 'コピー済';
+    btn.classList.add('copied');
+    setTimeout(() => {
+      btn.textContent = 'コピー';
+      btn.classList.remove('copied');
+    }, 2000);
+  });
+}
+</script>
+</body>
+</html>
